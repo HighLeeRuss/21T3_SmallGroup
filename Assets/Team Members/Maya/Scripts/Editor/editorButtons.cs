@@ -19,7 +19,7 @@ public class editorButtons : Editor
         }
         if (GUILayout.Button("Murder"))
         {
-            (target as HealthComponent)?.Die();
+            (target as HealthComponent)?.DeathFunction();
         }
     }
 

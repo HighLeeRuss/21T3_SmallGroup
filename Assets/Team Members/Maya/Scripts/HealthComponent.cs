@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public delegate void Die();
+
 
 public class HealthComponent : MonoBehaviour
 {
+    public delegate void DeathDelegate();
+
+    public event DeathDelegate onDeathEvent;
     [SerializeField] private float amountHP = 5f;
 
     [SerializeField] private float healTimer;
@@ -38,12 +41,13 @@ public class HealthComponent : MonoBehaviour
 
         if (currentHP <= 0f && dead == false)
         {
-            Die();
+            onDeathEvent?.Invoke();
         }
     }
 
-    public void Damage(float amountHP = -5f)
+    public void Damage(float amountHP = -2f)
     {
+        Debug.Log("ow");
         //healTimer = 2.0f;
         if (currentHP >= 0f)
         {
@@ -63,17 +67,9 @@ public class HealthComponent : MonoBehaviour
         }
     }
 
-    public void Die()
+    public void DeathFunction()
     {
-        dead = true;
-        //disable controls
-        //record final score
-        //lerp ship up and away
-        /*var position = transform.position;
-        float lerp = Mathf.Lerp(position.y, position.y +10f, 20f);
-        position = new Vector3(0, lerp, 0) + position;
-        transform.position = position;*/
-        Debug.Log("dead");
+        onDeathEvent?.Invoke();
     }
 
     /*{
