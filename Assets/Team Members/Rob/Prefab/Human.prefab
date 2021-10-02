@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 320407666}
   - component: {fileID: 320407667}
   m_Layer: 0
-  m_Name: DePlaya
+  m_Name: Human
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
