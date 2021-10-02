@@ -45,7 +45,7 @@ public class PlayerModel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float speed = 1f;
+        float speed = 3f;
         Vector2 direction = buttonMap.Player1Gameplay.Move.ReadValue<Vector2>();
         rb.AddForce(new Vector3(direction.x, 0, direction.y) * speed, ForceMode.Force);
     }

@@ -15,4 +15,9 @@ public class TreeModel : MonoBehaviour
     {
         
     }
+    void OnCollisionEnter(Collision hit)
+    {
+        hit.gameObject.GetComponent<HealthComponent>()?.Damage();
+        //sound effect
+    }
 }
