@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerModel : MonoBehaviour
 {
     private Rigidbody rb;
-    public PlayerInput player1Controls;
+    //public PlayerInput player1Controls;
     private PlayerTestControls buttonMap;
     //private Vector2 direction;
     void Awake()
