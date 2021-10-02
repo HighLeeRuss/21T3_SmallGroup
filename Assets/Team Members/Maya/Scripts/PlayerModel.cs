@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine.InputSystem;
 using UnityEngine;
 
@@ -34,7 +35,8 @@ public class PlayerModel : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<HealthComponent>().DeathFunction();
+        EditorApplication.ExitPlaymode();
+        //GetComponent<HealthComponent>().DeathFunction();
     }
     // Start is called before the first frame update
     void Start()
