@@ -9,58 +9,78 @@ public class HealthComponent : MonoBehaviour
     public delegate void DeathDelegate();
 
     public event DeathDelegate onDeathEvent;
-    [SerializeField] private float amountHP = 5f;
-
-    [SerializeField] private float healTimer;
+    // [SerializeField] private float amountHP = 5f;
+    //
+    // [SerializeField] private float healTimer;
+    
+    
+    
+    //Just rearanging things to make life easier
+    public float maxHP;
+    public float healAmount;
+    public float damageAmount;
     [SerializeField] private float currentHP;
+    public bool dead;
+    
+    
 
-    public bool dead = false;
-
-    public float maxHP = 25f;
+    
+    
     // Start is called before the first frame update
     //public event Die death;
     void Start()
     {
         //StartCoroutine(AutoHeal());
-        currentHP = 12f;
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Debug.Log("damage");
-            Damage(amountHP);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Debug.Log("heal");
-            Heal(amountHP);
-        }
-
-        if (currentHP <= 0f && dead == false)
-        {
-            onDeathEvent?.Invoke();
-        }
+        
+        
+        // if (Input.GetKeyDown("space"))
+        // {
+        //     Debug.Log("damage");
+        //     Damage();
+        // }
+        // if (Input.GetKeyDown(KeyCode.LeftShift))
+        // {
+        //     Debug.Log("heal");
+        //     Heal();
+        // }
+        
+        //this is kinda taxing, checking every frame
+        
+        // if (currentHP <= 0f && dead == false)
+        // {
+        //     onDeathEvent?.Invoke();
+        // }
     }
 
-    public void Damage(float amountHP = -2f)
+    public void Damage()
     {
         Debug.Log("ow");
         //healTimer = 2.0f;
         if (currentHP >= 0f)
         {
-            currentHP += amountHP;
+            currentHP -= damageAmount;
+            if (currentHP <= 0 && !dead)
+            {
+                dead = true;
+                currentHP = 0;
+                onDeathEvent?.Invoke();
+                
+            }
         }
     }
 
-    public void Heal(float amountHP = 5f)
+    public void Heal()
     {
-        if (currentHP <= maxHP && amountHP >0f)
+        if (currentHP < maxHP)
         {
-            currentHP += amountHP;
-            if (currentHP >= maxHP)
+            currentHP += healAmount;
+            if (currentHP > maxHP)
             {
                 currentHP = maxHP;
             }

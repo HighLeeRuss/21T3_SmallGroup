@@ -11,6 +11,10 @@ public class PlayerModel : MonoBehaviour
     //public PlayerInput player1Controls;
     private PlayerTestControls buttonMap;
     //private Vector2 direction;
+
+    public float speed;
+    
+    
     void Awake()
     {
         //check which player you are
@@ -29,7 +33,6 @@ public class PlayerModel : MonoBehaviour
         //rb.AddForce(transform.position * player1Controls.actions, ForceMode.Acceleration);
         Debug.Log(context);
         Vector2 inputVector = context.ReadValue<Vector2>();
-        float speed = 1f;
         rb.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * speed, ForceMode.Force);
     }
 
@@ -47,7 +50,6 @@ public class PlayerModel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float speed = 3f;
         Vector2 direction = buttonMap.Player1Gameplay.Move.ReadValue<Vector2>();
         rb.AddForce(new Vector3(direction.x, 0, direction.y) * speed, ForceMode.Force);
     }
