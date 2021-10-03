@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2480835559984434742}
   - component: {fileID: 2480835559984434737}
   - component: {fileID: 2480835559984434736}
+  - component: {fileID: 3225110351677275556}
   - component: {fileID: 2480835559984434739}
   m_Layer: 0
   m_Name: Human
@@ -114,6 +115,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &3225110351677275556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480835559984434738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3ad93a71874a14db98685f33c0e028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torque: 2
+  checkDist: 5
+  checkDistLeft: 3
+  checkDistRight: 3
 --- !u!114 &2480835559984434739
 MonoBehaviour:
   m_ObjectHideFlags: 0

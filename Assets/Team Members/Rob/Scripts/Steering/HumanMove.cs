@@ -13,6 +13,7 @@ namespace Rob
         private float attackTime;
         private Animator anim;
         private Vector2 position;
+        private Rigidbody rb;
         
         public Transform ufoTransform;
         // public Transform shotPoint;
@@ -29,7 +30,7 @@ namespace Rob
 
         public void Start()
         {
-            
+            rb = GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
@@ -39,8 +40,8 @@ namespace Rob
             {
                 if (Vector3.Distance(transform.position, ufoTransform.position) > stopDistance)
                 {
-                    transform.position =
-                        Vector3.MoveTowards(transform.position, ufoTransform.position, speed * Time.deltaTime);
+                    transform.LookAt(ufoTransform);
+                    rb.AddForce(transform.forward * speed);
                 }
 
                 else
@@ -51,22 +52,8 @@ namespace Rob
                         RangedAttack();
                     }
                 }
-
-                if (ufoTransform.position.x - transform.position.x > 0)
-                {
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
-                }
-
-                if (ufoTransform.position.x - transform.position.x < 0)
-                {
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
-                }
             }
-
-            if (InputSystem.GetDevice<Keyboard>().spaceKey.wasPressedThisFrame)
-            {
-                
-            }
+            
         }
 
       public void RangedAttack()
