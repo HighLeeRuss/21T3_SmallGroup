@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,15 @@ public class CowModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void OnTriggerEnter(Collider abduct)
+    {
+        Debug.Log(abduct);
+        Debug.Log("congrats, you caught a cow");
+        abduct.gameObject.GetComponent<PlayerModel>().CowAbduct();
+        Destroy(this);
         
     }
 }

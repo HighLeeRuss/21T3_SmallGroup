@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NodeCanvas.Tasks.Actions;
@@ -15,5 +16,12 @@ public class HumanModel : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider abduct)
+    {
+        Debug.Log("you hit a human, you monster");
+        abduct.gameObject.GetComponent<PlayerModel>().HumanAbduct();
+        Destroy(this);
     }
 }

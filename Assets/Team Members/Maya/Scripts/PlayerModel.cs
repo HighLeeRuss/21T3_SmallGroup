@@ -14,6 +14,7 @@ public class PlayerModel : MonoBehaviour
     //private Vector2 direction;
 
     public float speed;
+    public int score;
     
     
     void Awake()
@@ -67,6 +68,16 @@ public class PlayerModel : MonoBehaviour
 
     }
 
+    public void HumanAbduct()
+    {
+        //pick up anim
+        //drop down anim
+    }
+
+    public void CowAbduct()
+    {
+        score++;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
