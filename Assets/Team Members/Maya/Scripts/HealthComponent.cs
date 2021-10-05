@@ -58,7 +58,7 @@ public class HealthComponent : MonoBehaviour
         // }
     }
 
-    public void Damage()
+    public void Damage(float currentHP = -2)
     {
         Debug.Log("ow");
         //healTimer = 2.0f;

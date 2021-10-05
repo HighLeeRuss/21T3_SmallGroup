@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 350621193068390137}
   - component: {fileID: 350621193068390141}
   - component: {fileID: 2012058314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerUFO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
