@@ -19,6 +19,6 @@ public class Wander : MonoBehaviour
     void FixedUpdate()
     {
         perlin = Mathf.PerlinNoise( Random.Range(0f, 1000f) + Time.time, 0) -.5f;
-        rb.AddRelativeTorque(0f, perlin * Random.Range(1f,2f), 0f);
+        rb.AddRelativeTorque(0f, perlin, 0f);
     }
 }

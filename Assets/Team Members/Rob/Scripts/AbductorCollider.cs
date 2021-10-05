@@ -15,6 +15,7 @@ public class AbductorCollider : MonoBehaviour
         {
             Debug.Log("cow");
             //game manager adds score to player
+            Destroy(other.transform.parent.gameObject);
         }
 
         if (other.gameObject.GetComponentInParent<HumanMove>())

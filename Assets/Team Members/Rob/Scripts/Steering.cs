@@ -15,7 +15,7 @@ public class Steering : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponentInParent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
