@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &317838592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 342750652182013134, guid: a6354e3607be7d94489ffe1855050ba0, type: 3}
-  m_PrefabInstance: {fileID: 342750650927260832}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &763515969 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2480835559984434738, guid: 27a608b7d1584f347ab1a605c3d072fd, type: 3}
@@ -301,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: cow
       value: 
-      objectReference: {fileID: 317838592}
+      objectReference: {fileID: 0}
     - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: human
       value: 
@@ -316,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4075993733495992524, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.13
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 4075993733495992524, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: m_LocalPosition.y
