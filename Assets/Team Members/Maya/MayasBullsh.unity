@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11267058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1457580974239952008, guid: 6be783f87e551d24887d95d07f12db51, type: 3}
+  m_PrefabInstance: {fileID: 725945164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &11267061
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11267058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &144871826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1872949479480569455, guid: c745ae0fc0738cd4599a8cddadb7c762, type: 3}
@@ -144,6 +163,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1 &220293167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264176577268424395, guid: 062709f589ab46a448afe4e5104ff62e, type: 3}
+  m_PrefabInstance: {fileID: 2006157953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245494116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,7 +296,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6911820775835847587, guid: 6be783f87e551d24887d95d07f12db51, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6be783f87e551d24887d95d07f12db51, type: 3}
 --- !u!1 &909462863
 GameObject:
@@ -497,6 +522,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 062709f589ab46a448afe4e5104ff62e, type: 3}
+--- !u!1 &1229901986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5264176577268424395, guid: 062709f589ab46a448afe4e5104ff62e, type: 3}
+  m_PrefabInstance: {fileID: 1190008900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1229901989
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229901986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1583653270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,6 +775,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 93018932, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
+      propertyPath: m_SpotAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 93018932, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
+      propertyPath: cow
+      value: 
+      objectReference: {fileID: 11267058}
+    - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
+      propertyPath: human
+      value: 
+      objectReference: {fileID: 220293167}
+    - target: {fileID: 2012058314, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2800240499373795860, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: m_Name
       value: PlayerUFO
