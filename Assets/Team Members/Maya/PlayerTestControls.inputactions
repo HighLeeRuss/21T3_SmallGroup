@@ -12,6 +12,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Hold(duration=0.1)"
+                },
+                {
+                    "name": "Abduct",
+                    "type": "Button",
+                    "id": "aa59956e-c5cc-4e2b-8d2e-dcd360087ffc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.1)"
                 }
             ],
             "bindings": [
@@ -69,6 +77,17 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "22c01808-3daa-4271-8a7b-b0e4290b5e0a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Hold(duration=0.2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Abduct",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

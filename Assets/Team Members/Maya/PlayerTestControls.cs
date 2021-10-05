@@ -25,6 +25,14 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=0.1)""
+                },
+                {
+                    ""name"": ""Abduct"",
+                    ""type"": ""Button"",
+                    ""id"": ""aa59956e-c5cc-4e2b-8d2e-dcd360087ffc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=0.1)""
                 }
             ],
             ""bindings"": [
@@ -82,6 +90,17 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22c01808-3daa-4271-8a7b-b0e4290b5e0a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Hold(duration=0.2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Abduct"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -91,6 +110,7 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
         // Player1Gameplay
         m_Player1Gameplay = asset.FindActionMap("Player1Gameplay", throwIfNotFound: true);
         m_Player1Gameplay_Move = m_Player1Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Player1Gameplay_Abduct = m_Player1Gameplay.FindAction("Abduct", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,11 +161,13 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player1Gameplay;
     private IPlayer1GameplayActions m_Player1GameplayActionsCallbackInterface;
     private readonly InputAction m_Player1Gameplay_Move;
+    private readonly InputAction m_Player1Gameplay_Abduct;
     public struct Player1GameplayActions
     {
         private @PlayerTestControls m_Wrapper;
         public Player1GameplayActions(@PlayerTestControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player1Gameplay_Move;
+        public InputAction @Abduct => m_Wrapper.m_Player1Gameplay_Abduct;
         public InputActionMap Get() { return m_Wrapper.m_Player1Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -158,6 +180,9 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnMove;
+                @Abduct.started -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnAbduct;
+                @Abduct.performed -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnAbduct;
+                @Abduct.canceled -= m_Wrapper.m_Player1GameplayActionsCallbackInterface.OnAbduct;
             }
             m_Wrapper.m_Player1GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -165,6 +190,9 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Abduct.started += instance.OnAbduct;
+                @Abduct.performed += instance.OnAbduct;
+                @Abduct.canceled += instance.OnAbduct;
             }
         }
     }
@@ -172,5 +200,6 @@ public class @PlayerTestControls : IInputActionCollection, IDisposable
     public interface IPlayer1GameplayActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnAbduct(InputAction.CallbackContext context);
     }
 }
