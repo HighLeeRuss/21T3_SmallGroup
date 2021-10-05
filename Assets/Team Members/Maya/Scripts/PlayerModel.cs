@@ -22,7 +22,8 @@ public class PlayerModel : MonoBehaviour
         //check which player you are
         //set controls for player1/2
         //player1Controls = GetComponent<PlayerInput>();//add the parameter of player1/2
-        abductorLight.SetActive(false);
+        abductorLight.GetComponent<Light>().spotAngle = 5f;
+        abductorLight.GetComponent<Collider>().enabled = false;
         buttonMap = new PlayerTestControls();
         buttonMap.Player1Gameplay.Enable();
         buttonMap.Player1Gameplay.Move.performed += Move;
@@ -45,14 +46,16 @@ public class PlayerModel : MonoBehaviour
     {
         if (context.performed)
         {
-            abductorLight.SetActive(true);
+            abductorLight.GetComponent<Collider>().enabled = true;
+            abductorLight.GetComponent<Light>().spotAngle = 30f;
             buttonMap.Player1Gameplay.Move.Disable();
         }
 
         if (context.canceled)
         {
-            Debug.Log("let go");
-            abductorLight.SetActive(false);
+            //Debug.Log("let go");
+            abductorLight.GetComponent<Collider>().enabled = false;
+            abductorLight.GetComponent<Light>().spotAngle = 5f;
             buttonMap.Player1Gameplay.Move.Enable();
         }
     }
@@ -70,12 +73,14 @@ public class PlayerModel : MonoBehaviour
 
     public void HumanAbduct()
     {
+        Debug.Log("oh god the humanity");
         //pick up anim
         //drop down anim
     }
 
     public void CowAbduct()
     {
+        Debug.Log("moo");
         score++;
     }
     // Update is called once per frame

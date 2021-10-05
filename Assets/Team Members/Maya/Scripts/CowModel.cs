@@ -16,13 +16,4 @@ public class CowModel : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider abduct)
-    {
-        Debug.Log(abduct);
-        Debug.Log("congrats, you caught a cow");
-        abduct.gameObject.GetComponent<PlayerModel>().CowAbduct();
-        Destroy(this);
-        
-    }
 }

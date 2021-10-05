@@ -15,11 +15,13 @@ public class AbductorCollider : MonoBehaviour
         if (other.gameObject == cow)
         {
             Debug.Log("cow");
+            //game manager adds score to player
         }
 
         if (other.gameObject == human)
         {
             Debug.Log("human");
+            //human abduction shit happens
         }
     }
 }

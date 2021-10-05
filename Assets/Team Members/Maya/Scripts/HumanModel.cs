@@ -17,11 +17,4 @@ public class HumanModel : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider abduct)
-    {
-        Debug.Log("you hit a human, you monster");
-        abduct.gameObject.GetComponent<PlayerModel>().HumanAbduct();
-        Destroy(this);
-    }
 }
