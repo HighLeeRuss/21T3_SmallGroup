@@ -12,11 +12,9 @@ public class PlayerModel : MonoBehaviour
     //public PlayerInput player1Controls;
     private PlayerTestControls buttonMap;
     //private Vector2 direction;
-
     public float speed;
     public int score;
-    
-    
+
     void Awake()
     {
         //check which player you are
@@ -32,6 +30,7 @@ public class PlayerModel : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         GetComponent<HealthComponent>().onDeathEvent += Die;
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -70,19 +69,9 @@ public class PlayerModel : MonoBehaviour
     {
 
     }
+    
 
-    public void HumanAbduct()
-    {
-        Debug.Log("oh god the humanity");
-        //pick up anim
-        //drop down anim
-    }
 
-    public void CowAbduct()
-    {
-        Debug.Log("moo");
-        score++;
-    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -90,4 +79,5 @@ public class PlayerModel : MonoBehaviour
         rb.AddForce(new Vector3(direction.x, 0, direction.y) * speed, ForceMode.Force);
     }
 }
+
 
