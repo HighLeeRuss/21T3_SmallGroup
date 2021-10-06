@@ -11,10 +11,10 @@ namespace Rob
         private Animator anim;
         private Vector2 position;
         private Rigidbody rb;
+        private GameObject UFO;
 
         public Transform shotPoint;
         public GameObject enemyBullet;
-        public GameObject UFO;
         public float stopDistance;
         public float speed;
         public float timeBetweenAttacks;
@@ -22,6 +22,8 @@ namespace Rob
         public void Start()
         {
             rb = GetComponent<Rigidbody>();
+            UFO = GameObject.Find("PlayerUFO");
+
         }
 
         // Update is called once per frame

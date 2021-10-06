@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Rob;
+using Random = UnityEngine.Random;
 
 public class Steering : MonoBehaviour
 {
@@ -13,16 +14,28 @@ public class Steering : MonoBehaviour
     public float checkDistRight;
 
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        rb.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0,Random.Range(0f,360f),0));
+    }
+
+
     void Update()
     {
         Ray rayForward = new Ray(this.transform.position, this.transform.forward);
+        Debug.DrawRay(transform.position, transform.forward * checkDist, Color.black);
+        
         Ray rayLeft = new Ray(this.transform.position, transform.forward - transform.right);
+        Debug.DrawRay(transform.position, (transform.forward + transform.right) * checkDistRight, Color.red);
+        
         Ray rayRight = new Ray(this.transform.position, transform.forward + transform.right);
+        Debug.DrawRay(transform.position, (transform.forward - transform.right) * checkDistLeft, Color.red);
+        
 
         RaycastHit hit;
 
@@ -44,8 +57,8 @@ public class Steering : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Debug.DrawRay(transform.position, transform.forward * checkDist, Color.black);
-        Debug.DrawRay(transform.position, (transform.forward + transform.right) * checkDistRight, Color.red);
-        Debug.DrawRay(transform.position, (transform.forward - transform.right) * checkDistLeft, Color.red);
+        
+        
+        
     }
 }
