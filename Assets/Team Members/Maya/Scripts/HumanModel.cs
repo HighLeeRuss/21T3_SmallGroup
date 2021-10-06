@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HumanModel : MonoBehaviour
 {
-<<<<<<< HEAD
+
     private Renderer myMat;
 
     // Start is called before the first frame update
@@ -27,7 +27,4 @@ public class HumanModel : MonoBehaviour
         //Renderer myRend = GetComponent<Renderer>();
         myMat.material.SetColor("_Color", Color.magenta);
     }
-=======
-
->>>>>>> 564fc6975eb1b174265226a05d22ca1d70907253
 }
