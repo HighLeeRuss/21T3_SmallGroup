@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class TitleScreen : MonoBehaviour
+public class TitleScreen : StateBase
 {
     // Start is called before the first frame update
-    void Start()
+    public override void Enter()
+    {
+        this.gameObject.SetActive(true);
+    }
+    public override void Execute()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Exit()
     {
-        
+        this.gameObject.SetActive(false);
     }
 }
