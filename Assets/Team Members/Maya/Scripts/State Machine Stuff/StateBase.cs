@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StateBase : MonoBehaviour
 {
+	//public StateBase nextStateTest;
        // Note the ‘virtual’ keywords. 
        // This allows this function to be ‘override’ overridden in other classes to customise what happens for each state
 
