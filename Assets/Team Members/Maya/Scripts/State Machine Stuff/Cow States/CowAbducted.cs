@@ -7,6 +7,18 @@ public class CowAbducted : StateBase
 {
     public override void Enter()
     {
-        Debug.Log("up up and away");
+        //set movement speed to 0
+        //play animation
+        //moo
+    }
+    public override void Execute()
+    {
+        //add 1 to abducting players score
+        //moo
+    }
+    public override void Exit()
+    {
+        //sad moo
+        //destroy self
     }
 }

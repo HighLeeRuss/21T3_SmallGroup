@@ -6,6 +6,18 @@ public class CowIdle : StateBase
 {
     public override void Enter()
     {
-        Debug.Log("just eatin some grass, boys");
+        //set movement speed low
+        //random waypoint set
+    }
+    public override void Execute()
+    {
+        //wander and stop code
+        //eat grass animation when you stop
+        //listen for ufo, scared cows and humans
+        //if any of them exit()
+    }
+    public override void Exit()
+    {
+        //become scared
     }
 }
