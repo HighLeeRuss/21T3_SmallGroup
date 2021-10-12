@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class CowAbducted : MonoBehaviour
+public class CowAbducted : StateBase
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Enter()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("up up and away");
     }
 }
