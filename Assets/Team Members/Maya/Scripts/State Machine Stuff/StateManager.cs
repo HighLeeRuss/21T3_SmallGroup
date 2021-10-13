@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    public StateBase currentState;
-
-    public StateBase nextStateTest;
-    // Start is called before the first frame update
-    public void ChangeState(StateBase nextState)
+    public StateBase currentState; 
+    
+    
+    public void ChangeState(StateBase newState)
     {
-        Debug.Log("next state");
+        //Debug.Log("next state");
+        //if you have a state right now, Exit();
+        //currentState = newState
+        //currentState.Enter();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //if you have 
     }
 }

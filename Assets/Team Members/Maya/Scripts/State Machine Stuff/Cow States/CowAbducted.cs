@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CowAbducted : StateBase
 {
+    public StateBase nextState;
     public override void Enter()
     {
         //set movement speed to 0

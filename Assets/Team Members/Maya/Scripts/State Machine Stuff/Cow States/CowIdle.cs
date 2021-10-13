@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CowIdle : StateBase
 {
+        
+    public StateBase nextState;
     public override void Enter()
     {
+        Debug.Log("idle entered");
         //set movement speed low
         //random waypoint set
     }
@@ -18,6 +21,7 @@ public class CowIdle : StateBase
     }
     public override void Exit()
     {
+        Debug.Log("idle exited");
         //become scared
     }
 }

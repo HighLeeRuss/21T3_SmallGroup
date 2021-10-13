@@ -8,12 +8,12 @@ public class stateButtons : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        if (GUILayout.Button("next state"))
+        /*if (GUILayout.Button("next state"))
         {
             
             var stateManager = target as StateManager;
             stateManager?.ChangeState(stateManager?.nextStateTest);
-        }
+        }*/
     }
 
     // Update is called once per frame
