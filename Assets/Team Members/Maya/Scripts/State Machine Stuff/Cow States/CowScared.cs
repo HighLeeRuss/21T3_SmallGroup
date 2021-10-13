@@ -7,11 +7,11 @@ public class CowScared : StateBase
     //public int x;
     public StateBase idleState;
     public StateBase abductedState;
-    public StateBase nextState;
+    //public StateBase nextState;
     public override void Enter()
     {
         base.Enter();
-        nextState = idleState;
+        //nextState = idleState;
         FindObjectOfType<AbductorCollider>().onCowAbduction += HitByAbductor;
         //change colour
         //set movement speed high
@@ -27,7 +27,7 @@ public class CowScared : StateBase
     public override void Exit()
     {
         base.Exit();
-        GetComponent<StateManager>().ChangeState(nextState);
+        //GetComponent<StateManager>().ChangeState(nextState);
         //stop listening 
     }
     private void HitByAbductor()
@@ -35,7 +35,7 @@ public class CowScared : StateBase
         //add score to abducting player
         //play animation
         Debug.Log("congratufuckinglations");
-        nextState = abductedState;
+        //nextState = abductedState;
         //this.enabled = false;
     }
 }
