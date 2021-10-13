@@ -11,6 +11,16 @@ public class StateManager : MonoBehaviour
     {
         //Debug.Log("next state");
         //if you have a state right now, Exit();
+        if (currentState != null)
+        {
+            currentState.Exit();
+        }
+
+        if (newState != null)
+        {
+            newState.Enter();
+            currentState = newState;
+        }
         //currentState = newState
         //currentState.Enter();
         
@@ -19,6 +29,9 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if you have 
+        if (currentState != null)
+        {
+            currentState.Execute();
+        }
     }
 }

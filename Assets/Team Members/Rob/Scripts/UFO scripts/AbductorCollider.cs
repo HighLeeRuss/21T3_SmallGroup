@@ -19,7 +19,7 @@ public class AbductorCollider : MonoBehaviour
     {
         if (other.gameObject.GetComponentInParent<CowModel>())
         {
-            //Debug.Log("cow");
+            Debug.Log("cow");
             onCowAbduction?.Invoke();
         }
 

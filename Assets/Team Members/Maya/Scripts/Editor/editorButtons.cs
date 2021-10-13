@@ -21,6 +21,8 @@ public class editorButtons : Editor
         {
             (target as HealthComponent)?.DeathFunction();
         }*/
+        base.OnInspectorGUI();
+        GUILayout.BeginHorizontal();
 
         if (GUILayout.Button("Enter"))
         {
@@ -34,11 +36,6 @@ public class editorButtons : Editor
         {
             (target as StateBase)?.Exit();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GUILayout.EndHorizontal();
     }
 }

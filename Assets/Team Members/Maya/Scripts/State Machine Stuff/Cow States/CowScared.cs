@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class CowScared : StateBase
 {
+    //public int x;
+    public StateBase idleState;
+    public StateBase abductedState;
     public StateBase nextState;
     public override void Enter()
     {
+        base.Enter();
+        nextState = idleState;
+        FindObjectOfType<AbductorCollider>().onCowAbduction += HitByAbductor;
+        //change colour
         //set movement speed high
         //set waypoint away from thingThatScaredMe
+        //activate scaredRun
+        //listen for events that change state
     }
+    
     public override void Execute()
     {
-        //check for continued danger
-        //if there is, Enter()
-        //if theres not, drop movement speed back to idle
-        //if you are hit by an abductor, ChangeState(abducted)
+        base.Execute();
     }
     public override void Exit()
     {
-        //become idle
-        //become asb
+        base.Exit();
+        GetComponent<StateManager>().ChangeState(nextState);
+        //stop listening 
+    }
+    private void HitByAbductor()
+    {
+        //add score to abducting player
+        //play animation
+        Debug.Log("congratufuckinglations");
+        nextState = abductedState;
+        //this.enabled = false;
     }
 }
