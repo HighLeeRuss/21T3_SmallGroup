@@ -11,18 +11,14 @@ public class CowScared : StateBase
     public override void Enter()
     {
         base.Enter();
-        //nextState = idleState;
+        Debug.Log("cow is scared");
         FindObjectOfType<AbductorCollider>().onCowAbduction += HitByAbductor;
-        //change colour
-        //set movement speed high
-        //set waypoint away from thingThatScaredMe
-        //activate scaredRun
-        //listen for events that change state
     }
     
     public override void Execute()
     {
         base.Execute();
+        Debug.Log("cow is still scared");
     }
     public override void Exit()
     {
@@ -32,10 +28,7 @@ public class CowScared : StateBase
     }
     private void HitByAbductor()
     {
-        //add score to abducting player
-        //play animation
-        Debug.Log("congratufuckinglations");
-        //nextState = abductedState;
-        //this.enabled = false;
+        Debug.Log("hit by an abductor");
+        GetComponent<StateManager>().ChangeState(abductedState);
     }
 }

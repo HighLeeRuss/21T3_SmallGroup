@@ -23,9 +23,9 @@ public class AbductorCollider : MonoBehaviour
             onCowAbduction?.Invoke();
         }
 
-        if (other.gameObject.GetComponentInParent<HumanMove>())
+        if (other.gameObject.GetComponentInParent<HumanModel>())
         {
-            //Debug.Log("human");
+            Debug.Log("human abducted");
             onHumanAbduction?.Invoke();
             //human abduction shit happens
         }

@@ -10,20 +10,15 @@ public class CowAbducted : StateBase
     {
         base.Enter();
         Debug.Log("you successfully abducted a cow");
-        //set movement speed to 0
-        //play animation
-        //moo
     }
     public override void Execute()
     {
         base.Execute();
-        //add 1 to abducting players score
-        //moo
+        Debug.Log("still abducted");
     }
     public override void Exit()
     {
         base.Exit();
-        //sad moo
-        //destroy self
+        Debug.Log("converted to score");
     }
 }

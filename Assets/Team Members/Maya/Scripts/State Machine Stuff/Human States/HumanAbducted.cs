@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanAbducted : MonoBehaviour
+public class HumanAbducted : StateBase
 {
-    // Start is called before the first frame update
-    void Start()
+    private Renderer myMat;
+    //public StateBase brainwashedState;
+    public StateBase idleState;
+    public override void Enter()
     {
-        
+        base.Enter();
+        Debug.Log("you unfortunately abducted a primate");
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Execute()
     {
-        
+        base.Execute();
+        Debug.Log("still going");
+    }
+    public override void Exit()
+    {
+        base.Exit();
+        Debug.Log("brainwashed");
     }
 }

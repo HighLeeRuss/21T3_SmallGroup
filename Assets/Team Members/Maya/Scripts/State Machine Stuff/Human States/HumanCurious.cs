@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CowIdle : StateBase
+public class HumanCurious : StateBase
 {
-        
-    public StateBase nextState;
+
+    public StateBase attackingState;
+    public StateBase idleState;
     public override void Enter()
     {
-        Debug.Log("idle entered");
+        Debug.Log("curious enter");
         base.Enter();
     }
     public override void Execute()
     {
         base.Execute();
-        Debug.Log("idling");
+        Debug.Log("curious executing");
     }
     public override void Exit()
     {
         base.Exit();
-        Debug.Log("idle exited");
+        Debug.Log("curious exit");
     }
 }
