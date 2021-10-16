@@ -9,7 +9,6 @@ public class StateManager : MonoBehaviour
     
     public void ChangeState(StateBase newState)
     {
-        //Debug.Log("next state");
         //if you have a state right now, Exit();
         if (currentState != null)
         {
@@ -21,8 +20,7 @@ public class StateManager : MonoBehaviour
             newState.Enter();
             currentState = newState;
         }
-        //currentState = newState
-        //currentState.Enter();
+     
         
     }
 
