@@ -10,6 +10,7 @@ public class HumanIdle : StateBase
     {
         Debug.Log("human idle entered");
         base.Enter();
+        FindObjectOfType<SoundComponent>().onHumanHeard += HeardPlayer;
     }
     public override void Execute()
     {
@@ -20,5 +21,10 @@ public class HumanIdle : StateBase
     {
         base.Exit();
         Debug.Log("human idle exited");
+    }
+    private void HeardPlayer()
+    {
+        Debug.Log("cow hears a spaceship");
+        GetComponent<StateManager>().ChangeState(curiousState);
     }
 }

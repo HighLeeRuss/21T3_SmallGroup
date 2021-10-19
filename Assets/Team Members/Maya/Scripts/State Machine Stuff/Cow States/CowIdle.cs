@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CowIdle : StateBase
 {
-        
-    public StateBase nextState;
+    public StateBase scaredState;
+    public StateBase idleState;
     public override void Enter()
     {
         Debug.Log("idle entered");
         base.Enter();
+        FindObjectOfType<SoundComponent>().onCowHeard += HeardPlayer;
     }
     public override void Execute()
     {
@@ -20,5 +21,11 @@ public class CowIdle : StateBase
     {
         base.Exit();
         Debug.Log("idle exited");
+    }
+
+    private void HeardPlayer()
+    {
+        Debug.Log("cow hears a spaceship");
+        GetComponent<StateManager>().ChangeState(scaredState);
     }
 }

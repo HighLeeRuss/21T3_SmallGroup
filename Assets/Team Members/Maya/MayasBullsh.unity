@@ -761,7 +761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6550bdef6e3c0a145bccc20553a2234b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextState: {fileID: 1552060297}
+  scaredState: {fileID: 0}
+  idleState: {fileID: 0}
 --- !u!114 &1552060297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,26 +1251,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 93018932, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
-      propertyPath: m_SpotAngle
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 93018932, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
-      propertyPath: cow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1866296459, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
-      propertyPath: human
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012058314, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2800240499373795860, guid: 0c04efc58d8c54849a811d23f68c316b, type: 3}
       propertyPath: m_Name
       value: PlayerUFO

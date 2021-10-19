@@ -11,6 +11,10 @@ public class HumanCurious : StateBase
     {
         Debug.Log("curious enter");
         base.Enter();
+        //move towards collision
+        //check for LOS on player
+        //if yes, attackingState
+        //if no, go back to idle
     }
     public override void Execute()
     {

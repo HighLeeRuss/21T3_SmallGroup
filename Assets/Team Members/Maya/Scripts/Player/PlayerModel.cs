@@ -9,6 +9,7 @@ public class PlayerModel : MonoBehaviour
 {
     public GameObject abductorLight;
     private Rigidbody rb;
+    [SerializeField] private SphereCollider soundBubble; 
     //public PlayerInput player1Controls;
     private PlayerTestControls buttonMap;
     //private Vector2 direction;
@@ -30,6 +31,8 @@ public class PlayerModel : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         GetComponent<HealthComponent>().onDeathEvent += Die;
+
+        soundBubble = GetComponent<SphereCollider>();
 
     }
 
