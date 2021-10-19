@@ -199,7 +199,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 158807e8563b6cc42869ff9819949e04, type: 2}
-  - {fileID: 2100000, guid: 158807e8563b6cc42869ff9819949e04, type: 2}
+  - {fileID: 2100000, guid: 1f6038a52d6492d48b6295b138656128, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8561003abcb692e49aadf7f74ae0b821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brainwashedState: {fileID: 0}
   idleState: {fileID: 2642457882919124051}
 --- !u!114 &6275143303062723861
 MonoBehaviour:
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627db272305993841b6eda707e923665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 0}
+  currentState: {fileID: 1886982853732792337}
 --- !u!114 &4205098348495423305
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class HumanIdle : StateBase
     }
     private void HeardPlayer()
     {
-        Debug.Log("cow hears a spaceship");
+        Debug.Log("human hears a spaceship");
         GetComponent<StateManager>().ChangeState(curiousState);
     }
 }

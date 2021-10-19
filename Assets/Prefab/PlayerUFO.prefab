@@ -296,10 +296,12 @@ GameObject:
   - component: {fileID: 4075993733495992524}
   - component: {fileID: 5732398613231181307}
   - component: {fileID: 8397708286625772439}
+  - component: {fileID: 3553372646442207591}
   - component: {fileID: 350621193068390137}
   - component: {fileID: 350621193068390141}
   - component: {fileID: 1524973920}
   - component: {fileID: 2012058314}
+  - component: {fileID: 6132129918697146475}
   m_Layer: 0
   m_Name: PlayerUFO
   m_TagString: Untagged
@@ -357,6 +359,18 @@ MonoBehaviour:
   damageAmount: 2
   currentHP: 0
   dead: 0
+--- !u!114 &3553372646442207591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800240499373795860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6760032539a6d4d91ff20ad135997d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &350621193068390137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -459,5 +473,17 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6132129918697146475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800240499373795860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6760032539a6d4d91ff20ad135997d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
