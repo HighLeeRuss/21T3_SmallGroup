@@ -15,7 +15,6 @@ public class HumanCurious : StateBase
         //check for LOS on player
         //if yes, attackingState
         //if no, go back to idle
-        
     }
     public override void Execute()
     {
