@@ -21,7 +21,7 @@ public class HumanAbducted : StateBase
     public override void Exit()
     {
         base.Exit();
-        Debug.Log("brainwashed");
+        Debug.Log("human abducted exited");
         /*myMat = GetComponent<Renderer>();
         myMat.material.SetColor(magenta, )*/
         GetComponent<StateManager>().ChangeState(brainwashedState);

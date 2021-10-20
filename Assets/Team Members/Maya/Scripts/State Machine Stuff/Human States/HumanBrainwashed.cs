@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanBrainwashed : MonoBehaviour
+public class HumanBrainwashed : StateBase
 {
-    // Start is called before the first frame update
-    void Start()
+    private Renderer myMat;
+    public StateBase attackingState;
+    public override void Enter()
     {
-        
+        base.Enter();
+        Debug.Log("brainwashed entered");
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Execute()
     {
-        
+        base.Execute();
+    }
+    public override void Exit()
+    {
+        base.Exit();
+        Debug.Log("brainwashed exited");
     }
 }
